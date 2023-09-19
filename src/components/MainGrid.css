@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+  --color-site-1: hsl(36, 100%, 99%);
+
+  --color-brand-1: hsl(240, 100%, 5%);
+  --color-brand-2: hsl(233, 8%, 79%);
+  --color-brand-3: hsl(236, 13%, 42%);
+  --color-brand-4: hsl(35, 77%, 62%);
+  --color-brand-5: hsl(5, 85%, 63%);
+
+  --font-inter: "Inter", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  width: 100%;
+  padding: 2rem;
+}
+
+.Grid-ImgBox {
+  width: 100%;
+  height: 25rem;
+}
+
+.Grid-ImgBox > picture > img {
+  width: 100%;
+  height: 100%;
+}
+
+.Grid-Title {
+  padding: 2rem 0;
+}
+
+.Grid-Title > strong {
+  color: var(--color-brand-1);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 4.8rem;
+}
+
+.Grid-Info {
+  padding-bottom: 2rem;
+}
+
+.Grid-Info > p {
+  font-size: 1.5rem;
+  color: var(--color-brand-3);
+  line-height: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.Grid-Info > button {
+  background-color: var(--color-brand-5);
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1.25rem 3rem;
+  text-transform: uppercase;
+  color: var(--color-site-1);
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.Grid-Info > button:hover {
+  color: var(--color-site-1);
+  background-color: var(--color-brand-1);
+}
+
+.Grid-NewBox {
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--color-brand-1);
+}
+
+.Grid-NewBox-Title {
+  color: var(--color-brand-4);
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.Grid-NewBox-List {
+  list-style: none;
+}
+
+.Grid-NewBox-List > li {
+  padding: 1.5rem 0;
+}
+
+.Grid-NewBox-List > li:not(:last-of-type) {
+  border-bottom: 1px solid var(--color-brand-2);
+}
+
+.Grid-NewBox-List > li > h2 {
+  color: var(--color-site-1);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.Grid-NewBox-List > li > h2:hover {
+  color: var(--color-brand-4);
+}
+
+.Grid-NewBox-List > li > p {
+  font-size: 1.5rem;
+  color: var(--color-brand-2);
+  margin-bottom: 1rem;
+  line-height: 2.5rem;
+}
+
+@media screen and (max-width: 300px) {
+  main {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1010px) {
+  .Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .Grid-ImgBox {
+    grid-area: 1/1/2/3;
+  }
+
+  .Grid-Title {
+    grid-area: 2/1/2/2;
+  }
+
+  .Grid-Info {
+    grid-area: 2/2/2/2;
+  }
+
+  .Grid-NewBox {
+    grid-area: 1/3/3/3;
+  }
+
+  .Grid-Title > strong {
+    font-size: 6.5rem;
+    line-height: 7rem;
+  }
+
+  .Grid-NewBox-Title {
+    font-size: 3rem;
+  }
+
+  .Grid-NewBox-List > li > h2 {
+    font-size: 2rem;
+  }
+}
