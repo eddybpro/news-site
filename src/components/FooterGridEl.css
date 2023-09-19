@@ -66,11 +66,12 @@ html {
 
 @media screen and (min-width: 900px) {
   .FooterGridEl {
-    max-width: 28rem;
+    grid-template-columns: 30% 70%;
+    gap: 2rem;
   }
 
   .FooterGridEl-ImgBox > img {
-    width: 100%;
+    width: 10rem;
     height: 17.45rem;
   }
 }
